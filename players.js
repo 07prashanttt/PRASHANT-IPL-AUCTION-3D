@@ -1,0 +1,27 @@
+/* Starter player pool. Add verified current-season players and verified photo URLs here. */
+window.PLAYER_POOL = [
+ {id:'vk',name:'Virat Kohli',country:'India',flag:'🇮🇳',role:'Batter',category:'GRADE A',base:2,overseas:false,stats:'Right-hand batter • Top order',rating:96},
+ {id:'rs',name:'Rohit Sharma',country:'India',flag:'🇮🇳',role:'Batter',category:'GRADE A',base:2,overseas:false,stats:'Right-hand batter • Opener',rating:94},
+ {id:'jb',name:'Jasprit Bumrah',country:'India',flag:'🇮🇳',role:'Bowler',category:'GRADE A',base:2,overseas:false,stats:'Right-arm fast • Death overs',rating:98},
+ {id:'msd',name:'MS Dhoni',country:'India',flag:'🇮🇳',role:'Wicketkeeper',category:'GRADE A',base:2,overseas:false,stats:'Wicketkeeper • Finisher',rating:91},
+ {id:'hp',name:'Hardik Pandya',country:'India',flag:'🇮🇳',role:'All-rounder',category:'GRADE A',base:2,overseas:false,stats:'Seam-bowling all-rounder',rating:91},
+ {id:'gl',name:'Glenn Maxwell',country:'Australia',flag:'🇦🇺',role:'All-rounder',category:'GRADE A',base:2,overseas:true,stats:'Batting all-rounder • Off spin',rating:90},
+ {id:'st',name:'Steve Smith',country:'Australia',flag:'🇦🇺',role:'Batter',category:'BATTER',base:1.5,overseas:true,stats:'Top-order batter',rating:87},
+ {id:'jb2',name:'Jos Buttler',country:'England',flag:'🏴',role:'Wicketkeeper',category:'WICKETKEEPER',base:2,overseas:true,stats:'Explosive opener • WK',rating:95},
+ {id:'tr',name:'Trent Boult',country:'New Zealand',flag:'🇳🇿',role:'Bowler',category:'BOWLER',base:2,overseas:true,stats:'Left-arm fast • Swing',rating:91},
+ {id:'rk',name:'Rashid Khan',country:'Afghanistan',flag:'🇦🇫',role:'Bowler',category:'GRADE A',base:2,overseas:true,stats:'Leg spin • Lower-order hitter',rating:96},
+ {id:'sd',name:'Sandeep Lamichhane',country:'Nepal',flag:'🇳🇵',role:'Bowler',category:'BOWLER',base:.5,overseas:true,stats:'Leg spin • Nepal',rating:82},
+ {id:'rp',name:'Rohit Paudel',country:'Nepal',flag:'🇳🇵',role:'Batter',category:'BATTER',base:.3,overseas:true,stats:'Top-order batter • Nepal',rating:78},
+ {id:'da',name:'Dipendra Singh Airee',country:'Nepal',flag:'🇳🇵',role:'All-rounder',category:'ALL-ROUNDER',base:.3,overseas:true,stats:'Batting all-rounder • Nepal',rating:80},
+ {id:'kb',name:'Kushal Bhurtel',country:'Nepal',flag:'🇳🇵',role:'Batter',category:'BATTER',base:.3,overseas:true,stats:'Opening batter • Nepal',rating:76},
+ {id:'sm',name:'Shaheen Afridi',country:'Pakistan',flag:'🇵🇰',role:'Bowler',category:'BOWLER',base:1.5,overseas:true,stats:'Left-arm fast',rating:90},
+ {id:'an',name:'Andre Russell',country:'West Indies',flag:'🌴',role:'All-rounder',category:'ALL-ROUNDER',base:2,overseas:true,stats:'Power hitter • Fast bowling',rating:94},
+ {id:'kl',name:'Kagiso Rabada',country:'South Africa',flag:'🇿🇦',role:'Bowler',category:'BOWLER',base:2,overseas:true,stats:'Right-arm fast',rating:91},
+ {id:'wk',name:'Wanindu Hasaranga',country:'Sri Lanka',flag:'🇱🇰',role:'All-rounder',category:'ALL-ROUNDER',base:1.5,overseas:true,stats:'Leg spin • Batting',rating:88},
+ {id:'un1',name:'Riyan Parag',country:'India',flag:'🇮🇳',role:'All-rounder',category:'UNCAPPED',base:.3,overseas:false,stats:'Batting all-rounder',rating:82},
+ {id:'un2',name:'Vaibhav Sooryavanshi',country:'India',flag:'🇮🇳',role:'Batter',category:'UNCAPPED',base:.3,overseas:false,stats:'Young top-order batter',rating:78},
+ {id:'py',name:'Prashant Yadav',country:'Nepal',flag:'🇳🇵',role:'All-rounder',category:'CUSTOM UNCAPPED',base:.3,overseas:true,custom:true,photo:'assets/custom/prashant-yadav.jpg',stats:'Custom player • All-rounder',rating:75},
+ {id:'pky',name:'Pankaj Yadav',country:'Nepal',flag:'🇳🇵',role:'All-rounder',category:'CUSTOM UNCAPPED',base:.3,overseas:true,custom:true,photo:'assets/custom/pankaj-yadav.jpg',stats:'Custom player • All-rounder',rating:75},
+ {id:'js',name:'Jiten Sah',country:'Nepal',flag:'🇳🇵',role:'All-rounder',category:'CUSTOM UNCAPPED',base:.3,overseas:true,custom:true,photo:'assets/custom/jiten-sah.jpg',stats:'Custom player • All-rounder',rating:75},
+ {id:'pry',name:'Priyesh Yadav',country:'Nepal',flag:'🇳🇵',role:'All-rounder',category:'CUSTOM UNCAPPED',base:.3,overseas:true,custom:true,photo:'assets/custom/priyesh-yadav.jpg',stats:'Custom player • All-rounder',rating:75}
+];

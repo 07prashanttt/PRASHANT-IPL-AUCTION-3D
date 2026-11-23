@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#080d1c"><meta name="description" content="PRASHANT IPL AUCTION 3D - franchise auction simulator">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>PRASHANT IPL AUCTION 3D</title>
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="brand-mark">🏏</span><div><b>PRASHANT IPL AUCTION 3D</b><small>FRANCHISE AUCTION SIMULATOR</small></div></div><div class="top-actions"><span class="live-dot">LIVE AUCTION</span><button id="soundBtn" class="icon-btn" aria-label="Toggle sound">🔊</button></div></header>
+<main>
+<section id="setupView" class="setup-wrap">
+ <div class="hero"><div class="eyebrow">THE BIGGEST CRICKET AUCTION EXPERIENCE</div><h1>Build your<br><em>Championship Squad.</em></h1><p>Choose your franchise, enter the auction room and outbid nine rival AI teams.</p><div class="hero-stats"><span><b>10</b> FRANCHISES</span><span><b>₹120 Cr</b> PURSE</span><span><b>9</b> AI RIVALS</span></div></div>
+ <div class="panel setup-panel"><h2>Choose your franchise</h2><p class="muted">You control one team. The other nine teams bid automatically.</p><div id="teamPicker" class="team-picker"></div><button id="startBtn" class="primary-btn full">ENTER AUCTION ROOM <span>→</span></button></div>
+</section>
+<section id="gameView" class="hidden">
+ <div class="auction-heading"><div><div class="eyebrow">MEGA AUCTION • SEASON 2026</div><h1>AUCTION <em>ARENA</em></h1></div><div class="heading-actions"><button id="saveBtn" class="secondary-btn">💾 Save</button><button id="resetBtn" class="secondary-btn">↻ New Auction</button></div></div>
+ <section class="score-strip" id="scoreStrip"></section>
+ <section class="arena-grid">
+  <div class="main-column">
+   <div class="stage panel"><div class="stage-top"><span class="live-dot">ON THE BLOCK</span><span id="lotLabel">LOT 001</span><span id="categoryLabel" class="tag">GRADE A</span></div><div class="player-stage"><div class="player-photo-wrap"><img id="playerPhoto" alt="Current player"><div id="playerInitial" class="player-initial">?</div></div><div class="player-info"><div id="playerCountry" class="country">🇮🇳 INDIA</div><h2 id="playerName">Player Name</h2><div id="playerRole" class="role-pill">BATTER</div><div class="player-stats" id="playerStats"></div><div class="price-line"><div><small>BASE PRICE</small><b id="basePrice">₹2.00 Cr</b></div><div><small>CURRENT BID</small><b id="currentBid" class="gold">₹2.00 Cr</b></div></div></div></div><div class="bidder-line"><span>HIGHEST BIDDER</span><b id="highestBidder">No bids yet</b><span id="bidCount">0 BIDS</span></div><div id="soldBanner" class="sold-banner hidden"></div></div>
+   <div class="bid-controls panel"><div class="bid-summary"><div><small>YOUR FRANCHISE</small><b id="yourTeamName">—</b></div><div><small>YOUR PURSE</small><b id="yourPurse" class="gold">₹120.00 Cr</b></div><div><small>OVERSEAS</small><b id="yourOverseas">0 / 8</b></div></div><div class="bid-buttons"><button id="bidBtn" class="primary-btn">🔨 PLACE BID</button><button id="passBtn" class="secondary-btn">PASS</button><button id="nextBtn" class="secondary-btn hidden">NEXT PLAYER →</button></div><p id="bidMessage" class="muted small">Watch the rival teams. Bid when you want this player.</p></div>
+   <div class="panel"><div class="panel-title"><h3>Live bid activity</h3><span class="muted small">Auction room feed</span></div><div id="activityFeed" class="activity-feed"><div class="empty">Auction activity will appear here.</div></div></div>
+  </div>
+  <aside class="side-column"><div class="panel"><div class="panel-title"><h3>Franchise purse table</h3><span class="muted small">LIVE</span></div><div id="teamLedger" class="team-ledger"></div></div><div class="panel"><div class="panel-title"><h3>Player queue</h3><span id="queueCount" class="muted small"></span></div><div id="playerQueue" class="player-queue"></div></div><div class="panel"><div class="panel-title"><h3>Recent purchases</h3></div><div id="purchaseFeed" class="purchase-feed"><div class="empty">No players sold yet.</div></div></div></aside>
+ </section>
+ <section class="lower-grid"><div class="panel"><div class="panel-title"><h3>Your squad</h3><span id="squadCount" class="muted small">0 / 25</span></div><div id="mySquad" class="squad-list"><div class="empty">Your purchased players will appear here.</div></div></div><div class="panel"><div class="panel-title"><h3>Match simulator</h3><span class="tag">QUICK MATCH</span></div><p class="muted small">After building a squad, simulate a quick T20 match with a generated scorecard.</p><button id="matchBtn" class="secondary-btn full">🏟️ SIMULATE MATCH</button><div id="matchResult" class="match-result"></div></div></section>
+</section>
+</main>
+<footer>PRASHANT IPL AUCTION 3D <span>Fan-made simulation • Not affiliated with the IPL or BCCI</span></footer>
+<script src="players.js"></script><script src="app.js"></script>
+</body></html>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
