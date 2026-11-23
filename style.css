@@ -1,0 +1,674 @@
+
+:root {
+  --bg: #080d1c;
+  --panel: #111a2d;
+  --panel2: #17233a;
+  --gold: #f5bd35;
+  --gold2: #ffdc78;
+  --text: #f5f7fb;
+  --muted: #9eabc0;
+  --line: rgba(255,255,255,.10);
+  --green: #29d391;
+  --red: #ff626d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% -20%, #203b68 0%, transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.topbar {
+  min-height: 76px;
+  padding: 14px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: rgba(7,12,25,.94);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  font-size: 34px;
+}
+
+.brand b {
+  display: block;
+  font-size: clamp(15px, 3vw, 21px);
+  letter-spacing: .5px;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live-dot {
+  color: #ff6972;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.icon-btn {
+  background: var(--panel2);
+  color: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+
+main {
+  width: min(1450px, 94%);
+  margin: auto;
+}
+
+.setup-wrap {
+  min-height: 75vh;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 45px;
+  padding: 65px 0;
+}
+
+.hero {
+  padding: 25px 0;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+
+.hero h1,
+.auction-heading h1 {
+  font-size: clamp(38px, 6vw, 76px);
+  line-height: 1.05;
+  margin: 22px 0;
+  letter-spacing: -2px;
+}
+
+.hero h1 em,
+.auction-heading h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.hero p {
+  max-width: 580px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.hero-stats span {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 13px 17px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.hero-stats b {
+  display: block;
+  color: var(--gold);
+  font-size: 21px;
+}
+
+.panel {
+  background: linear-gradient(145deg, #17243b, #0e1729);
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  padding: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.2);
+  min-width: 0;
+}
+
+.setup-panel h2 {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.muted,
+.small {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 12px;
+}
+
+.team-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.team-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  color: white;
+  background: #0b1426;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 11px;
+  min-width: 0;
+}
+
+.team-option:hover,
+.team-option.selected {
+  border-color: var(--gold);
+  background: #24314a;
+}
+
+.team-logo,
+.ledger-logo {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--team, #334);
+  color: white;
+  font-weight: 900;
+}
+
+.team-option b,
+.team-option small {
+  display: block;
+}
+
+.team-option b {
+  font-size: 12px;
+}
+
+.team-option small {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.primary-btn,
+.secondary-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 19px;
+  font-weight: 900;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #ffe08a, #e5a817);
+  color: #17100a;
+  box-shadow: 0 5px 20px rgba(245,189,53,.18);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.secondary-btn {
+  background: #24344f;
+  border: 1px solid var(--line);
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #344967;
+}
+
+.full {
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.auction-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 35px 0 22px;
+}
+
+.auction-heading h1 {
+  font-size: clamp(32px, 5vw, 55px);
+  margin: 8px 0;
+}
+
+.heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.score-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 18px;
+}
+
+.score-strip > * {
+  flex: 1 0 130px;
+}
+
+.arena-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, .85fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.main-column,
+.side-column {
+  display: grid;
+  gap: 17px;
+  min-width: 0;
+}
+
+.stage {
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 0%, #34496e, transparent 65%),
+    linear-gradient(145deg, #17243b, #0d1526);
+}
+
+.stage-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #1b1305;
+  background: var(--gold);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.player-stage {
+  display: grid;
+  grid-template-columns: minmax(140px, .8fr) 1.2fr;
+  gap: 22px;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.player-photo-wrap {
+  min-height: 200px;
+  aspect-ratio: 4 / 5;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #314968, #101a2b);
+  border: 1px solid var(--line);
+}
+
+.player-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.player-initial {
+  font-size: 55px;
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.player-info .country {
+  color: var(--gold2);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.player-info h2 {
+  font-size: clamp(23px, 4vw, 36px);
+  margin: 8px 0;
+}
+
+.role-pill {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.player-stats {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.price-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.price-line small,
+.bid-summary small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.price-line b,
+.bid-summary b {
+  display: block;
+  font-size: 21px;
+}
+
+.gold {
+  color: var(--gold) !important;
+}
+
+.bidder-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 17px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.bidder-line b {
+  color: var(--gold);
+}
+
+.sold-banner {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #126c4a, #1e9d67);
+  color: white;
+  text-align: center;
+  font-weight: 900;
+}
+
+.bid-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.bid-summary b {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.bid-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.bid-buttons button {
+  flex: 1;
+}
+
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.panel-title h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.activity-feed,
+.player-queue,
+.purchase-feed,
+.squad-list,
+.team-ledger {
+  display: grid;
+  gap: 9px;
+}
+
+.feed-row,
+.ledger-row,
+.player-queue > *,
+.purchase-feed > *,
+.squad-list > * {
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(255,255,255,.035);
+}
+
+.feed-row,
+.ledger-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.feed-price,
+.ledger-purse {
+  color: var(--gold);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.ledger-row > div:nth-child(2) {
+  flex: 1;
+}
+
+.ledger-row small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.ledger-logo {
+  width: 35px;
+  height: 35px;
+  font-size: 10px;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px 8px;
+  font-size: 12px;
+}
+
+.lower-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 20px 0 45px;
+}
+
+.match-result {
+  margin-top: 15px;
+}
+
+footer {
+  padding: 25px 5%;
+  text-align: center;
+  background: #060a14;
+  color: var(--gold);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+footer span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: normal;
+  margin-top: 6px;
+}
+
+@media (max-width: 850px) {
+  .setup-wrap {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 30px 0;
+  }
+
+  .arena-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-column {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .side-column > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  main {
+    width: 92%;
+  }
+
+  .topbar {
+    padding: 12px 4%;
+  }
+
+  .brand small {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .live-dot {
+    font-size: 9px;
+  }
+
+  .team-picker {
+    grid-template-columns: 1fr;
+  }
+
+  .auction-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .heading-actions {
+    width: 100%;
+  }
+
+  .heading-actions button {
+    flex: 1;
+  }
+
+  .player-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .player-photo-wrap {
+    width: min(100%, 260px);
+    margin: auto;
+  }
+
+  .side-column,
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-column > :first-child {
+    grid-column: auto;
+  }
+
+  .bid-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bid-summary > :last-child {
+    grid-column: 1 / -1;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+}
